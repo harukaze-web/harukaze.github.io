@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/vue@2.5.17"></script>
+<script src="https://unpkg.com/vue-router@3.0.1"></script>
+<title>harukaze</title>
+</head>
+
+<body>
+	<div id="app">
+		<dev class="menu">
+			<h1 class="title">harukaze</h1>
+			<ul>
+  		<router-link to="/all">
+				<li>All Works</li>
+			</router-link>
+ 	 		<router-link to="/graphicDesign">
+				<li>Graphic Design</li>
+			</router-link>
+			<router-link to="/uiUxDesign">
+				<li>UI/UX Design</li>
+			</router-link>
+			<router-link to="/productDesign">
+				<li>Product Design</li>
+			</router-link>
+			<router-link to="/photograph">
+				<li>Photograph</li>
+			</router-link>
+			</ul>
+		</dev>
+  <router-view></router-view>
+</div>
+</body>
+	
+<script>
+const all = {
+	template: `
+    		<div class="centering_item">
+					
+					<div class="main-image">
+					  <img src="works/Graphic/2021newyear.png" width="1182" height="1182" alt="2021年賀状イラスト"/>
+						<div class="text">
+					    <p>NEW YEAR GREETING</p>
+					    <p>2021</p>
+					  </div>
+					</div>
+					
+					<div class="image-container">
+						<div class="image">
+					    <img src="works/Graphic/Christmas2020.png" width="1182" height="1182" alt="2020クリスマスカード"/>
+							<div class="text">
+								<p>Christmas</p>
+					  	  <p>2020</p>
+							</div>
+						</div>
+					
+						<div class="image">
+				    	<img src="works/comingsoon.png" width="1182" height="1182" alt=""/>
+							<div class="text">
+								<p>coming soon</p>
+					  	  <p></p>
+							</div>
+					　</div>					
+					
+						<div class="image">
+				    	<img src="works/comingsoon.png" width="1182" height="1182" alt=""/>
+							<div class="text">
+								<p>coming soon</p>
+					  	  <p></p>
+							</div>
+						</div>
+						
+						<div class="image">
+					  	<img src="works/comingsoon.png" width="1182" height="1182" alt=""/>
+							<div class="text">
+								<p>coming soon</p>
+					  	  <p></p>
+							</div>
+						</div>
+				  </div>
+					
+        </div>
+     `
+}
+	
+var router =　new VueRouter({
+  routes: [
+    {
+      path: '/',
+      component: all
+    },
+		{
+      path: '/all',
+      component: all
+    },
+    {
+      path: '/graphicDesign',
+      component: all
+    },
+		{
+      path: '/uiUxDesign',
+      component: {
+        template: '<h1 class="message">Coming Soon</h1>'
+      }
+    },
+		{
+      path: '/productDesign',
+      component: {
+        template: '<h1 class="message">Coming Soon</h1>'
+      }
+    },
+		{
+      path: '/photograph',
+      component: {
+        template: '<h1 class="message">Coming Soon</h1>'
+      }
+    }
+  ]
+})
+
+var app = new Vue({
+    router: router
+}).$mount('#app')
+</script>
+	
+</html>
