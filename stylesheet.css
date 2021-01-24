@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+	margin:0px;
+	padding: 0px;
+  font-family: "Noto Sans Javanese Regular";
+	font-size: 16px;
+  color: #525C60;
+}
+
+
+.title{
+	font-family: 'Josefin Slab', serif;
+	margin: 56px 0px 24px 0px;
+	padding: 2px 0px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #000000;
+}
+
+.message{
+  text-align: center;
+  letter-spacing: 2px;
+  color: #dfebf2;
+}
+
+.menu ul {
+   text-align: center;
+   margin: 0px 0px 35px 0px;
+   padding: 0px;
+}
+
+.menu li {
+	position: relative;
+  height: 24px;
+  display: inline-block;
+  margin: 0px 20px;
+	padding: 4.5px 0px;
+	color: #525C60;
+}
+
+.menu li::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #dfebf2;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+}
+.menu li:hover::after {
+  transform: scale(1, 1);
+}
+
+
+.centering_item {
+	display: flex;
+	flex-wrap: wrap;
+  width: 1120px;               
+  height: auto;               
+  margin:  0 auto 160px auto;
+}
+
+.image-container { 
+	display: flex;
+	width:560px;
+	margin: 0px;
+	padding: 0px;
+	flex-wrap:wrap;
+}
+
+.main-image {
+  margin:40px 20px 0px 20px;
+	padding: 0px;
+	width:520px;
+	height: 520px;
+}
+
+.image {
+  margin:40px 20px 0px 20px;
+	padding: 0px;
+	width:240px;
+	height:240px;
+}
+
+.text {
+	width:auto;
+	display:flex;
+	justify-content: space-between;
+}
+
+.text p { 
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px 8px;
+}
+
+.main-image img {
+	width: 520px;
+  height: 498px;
+	object-fit: contain;
+}
+
+.image img{
+	width: 240px;
+	height: 218px;
+	object-fit: contain;
+}
+
+
+
+
+
+
